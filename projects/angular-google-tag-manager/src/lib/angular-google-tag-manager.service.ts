@@ -71,16 +71,6 @@ export class GoogleTagManagerService {
       'https://www.googletagmanager.com/gtm.js'
     );
     doc.head.insertBefore(gtmScript, doc.head.firstChild);
-
-    const ifrm = doc.createElement('iframe');
-    ifrm.setAttribute(
-      'src',
-      this.applyGtmQueryParams('https://www.googletagmanager.com/ns.html')
-    );
-    ifrm.style.width = '0';
-    ifrm.style.height = '0';
-    ifrm.style.display = 'none';
-    ifrm.style.visibility = 'hidden';
     
     this.isLoaded = true;
   }
