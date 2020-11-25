@@ -81,12 +81,7 @@ export class GoogleTagManagerService {
     ifrm.style.height = '0';
     ifrm.style.display = 'none';
     ifrm.style.visibility = 'hidden';
-
-    const noscript = doc.createElement('noscript');
-    noscript.id = 'GTMiframe';
-    noscript.appendChild(ifrm);
-
-    doc.body.insertBefore(noscript, doc.body.firstChild);
+    
     this.isLoaded = true;
   }
 
